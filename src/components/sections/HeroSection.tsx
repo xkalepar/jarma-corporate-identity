@@ -90,7 +90,7 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="btn-outline-hero text-base font-semibold px-8"
+              className=" text-base font-semibold px-8"
               onClick={() => scrollToSection("#about")}
             >
               <FileText className="h-5 w-5 ml-2" />

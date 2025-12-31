@@ -61,7 +61,7 @@ const AboutSection = () => {
         </div>
 
         {/* Official Company Data Box */}
-        <Card className="card-professional border-primary/20 bg-muted">
+        {/* <Card className="card-professional border-primary/20 bg-muted">
           <CardHeader>
             <CardTitle className="text-xl font-bold text-primary flex items-center gap-2">
               <Building2 className="h-6 w-6" />
@@ -83,7 +83,7 @@ const AboutSection = () => {
 الغريبه بالقرب من مصرف الصحاري
 جرمه مقابل الشيل`}
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );
