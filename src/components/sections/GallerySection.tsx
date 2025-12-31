@@ -78,7 +78,7 @@ const GallerySection = () => {
           {filteredItems.map((item, index) => (
             <div
               key={index}
-              className="gallery-item aspect-square animate-scale-in"
+              className="gallery-item group aspect-square animate-scale-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <img
