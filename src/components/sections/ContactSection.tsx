@@ -8,9 +8,10 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
 const phones = [
-  { number: "0924830561", label: "الهاتف الأول" },
-  { number: "09149794418", label: "الهاتف الثاني" },
-  { number: "0923661066", label: "الهاتف الثالث" },
+  { number: "0924830561", label: "الهاتف الأول" , email : false},
+  { number: "0914979441", label: "الهاتف الثاني" , email : false},
+  { number: "0923661066", label: "الهاتف الثالث" , email : false},
+  { number: "info@germa.ly", label: "البريد الإلكتروني" , email: true }
 ];
 
 const addresses = [
@@ -122,14 +123,14 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-foreground flex items-center gap-2">
                   <Phone className="h-5 w-5 text-primary" />
-                  أرقام الاتصال
+                  تواصل
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 {phones.map((phone, index) => (
                   <a
-                    key={index}
-                    href={`tel:${phone.number}`}
+                  key={index}
+                    href={phone.email ? `mailto:${phone.number}` : `tel:${phone.number}`}
                     className="flex items-center justify-between p-4 bg-muted hover:bg-primary/10 transition-colors group"
                   >
                     <span className="text-sm text-muted-foreground">

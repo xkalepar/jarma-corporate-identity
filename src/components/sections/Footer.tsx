@@ -1,6 +1,6 @@
 import { Phone, MapPin, Award, Receipt, Building2 } from "lucide-react";
 
-const phones = ["0924830561", "09149794418", "0923661066"];
+const phones = ["0924830561", "0914979441", "0923661066" , "info@germa.ly"];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,13 +13,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-secondary flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold text-xl">ج</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">شركة جرمه</h3>
-                <p className="text-sm text-background/70">لاستيراد اللحوم والمواشي</p>
-              </div>
+            <img src="logo.png" alt="Logo" className="w-auto h-20" />
+
             </div>
             <p className="text-background/70 leading-relaxed max-w-md">
               شركة ليبية متخصصة في استيراد اللحوم والمواشي، نهدف إلى تلبية احتياجات السوق المحلي عبر تنظيم عمليات الاستيراد وفق إجراءات واضحة.
@@ -30,13 +25,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
               <Phone className="h-5 w-5 text-secondary" />
-              أرقام الاتصال
+              تواصل
             </h4>
             <div className="space-y-3">
               {phones.map((phone, index) => (
                 <a
                   key={index}
-                  href={`tel:${phone}`}
+                  href={phone.includes("@") ? `mailto:${phone}` : `tel:${phone}`}
                   className="block text-background/70 hover:text-secondary transition-colors"
                 >
                   {phone}
