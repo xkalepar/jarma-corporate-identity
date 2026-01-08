@@ -1,5 +1,6 @@
 import { MapPin, AlertCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "../ui/button";
 
 const MapSection = () => {
   return (
@@ -14,46 +15,17 @@ const MapSection = () => {
         </div>
 
         {/* Map Placeholder */}
-        <Card className="card-professional overflow-hidden">
-          <div className="h-96 bg-muted flex items-center justify-center relative">
-            {/* Decorative Map Background */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="w-full h-full bg-gradient-to-br from-primary/30 to-secondary/30" />
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `
-                    linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)
-                  `,
-                  backgroundSize: "40px 40px",
-                }}
-              />
-            </div>
-
-            {/* Placeholder Content */}
-            <Card className="relative z-10 max-w-md mx-4">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-xl font-bold text-foreground">
-                  الموقع على الخريطة
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="flex items-center justify-center gap-2 text-muted-foreground mb-4">
-                  <AlertCircle className="h-5 w-5" />
-                  <p className="text-sm">
-                    الخريطة غير متوفرة حالياً — سيتم إضافتها عند تزويدنا برابط الموقع أو الإحداثيات.
-                  </p>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  ليبيا.. سبها اوباري منطقة جرمه
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+        <Card className="card-professional relative overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7311156.985471365!2d3.8836870040717835!3d26.523312399999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13cf33005c74d0c1%3A0xa4725ee18fac8847!2z2LTYsdmD2Kkg2KzYsdmF2Kkg2KfZhNin2KvYsdmK2Ycg2YTYp9iz2KrYsdin2K8g2KfZhNmF2YjYp9i02Yog2YjYp9mE2YTYrdmI2YU!5e0!3m2!1sen!2sly!4v1767876312920!5m2!1sen!2sly" width="600" height="450" style={{
+            border: 0,
+            width: "100%",
+            borderRadius: "0.5rem"
+          }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+         <a href="https://maps.app.goo.gl/26H9zgdBkQGsQ4SN8" target="_blank">
+           <Button variant="secondary" className="absolute bottom-4 right-4 flex items-center gap-2">
+            عرض الموقع الكامل <MapPin size={16} />
+          </Button>
+         </a>
         </Card>
       </div>
     </section>

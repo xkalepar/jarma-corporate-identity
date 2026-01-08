@@ -17,16 +17,14 @@ const addresses = [
   {
     title: "العنوان الرئيسي",
     lines: [
-      "ليبيا.. سبها اوباري منطقة جرمه",
-      "على الطريق الرئيسي اوباري سبها بالقرب من",
-      "معسكر الدفاعية جرمه",
+      " ليبيا.. سبها",
     ],
   },
   {
     title: "الفروع",
     lines: [
       "اوباري شارع البريد بالقرب من الثانوية",
-      "الغريبه بالقرب من مصرف الصحاري",
+      "الغريفة بالقرب من مصرف الصحاري",
       "جرمه مقابل الشيل",
     ],
   },
@@ -156,14 +154,21 @@ const ContactSection = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    {address.lines.map((line, lineIndex) => (
-                      <p
-                        key={lineIndex}
-                        className="text-muted-foreground leading-relaxed"
-                      >
-                        {line}
-                      </p>
-                    ))}
+                    {address.lines.map((line, lineIndex) => {
+                      const firstWord = line.split(" ")[0];
+                      const restOfLine = line.split(" ").slice(1).join(" ");
+                      return (
+                        <p>
+                          <span className="text-primary font-bold">
+                            {firstWord}
+                          </span>
+                          {" "}
+                          <span className="mx-2 ">
+                            {restOfLine}
+                          </span>
+                        </p>
+                      )
+                    })}
                   </div>
                 </CardContent>
               </Card>

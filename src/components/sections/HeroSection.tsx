@@ -69,7 +69,7 @@ const HeroSection = () => {
       <div className="relative h-full section-container flex flex-col justify-center">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-fade-up">
-            شركة جرمه لاستيراد اللحوم والمواشي
+            شركة جرمه الأثرية لاستيراد المواشي و المواشي 
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-up" style={{ animationDelay: "0.1s" }}>
             حلول استيراد موثوقة تخدم الأسواق داخل ليبيا، مع تركيز على الجودة والانضباط في الإجراءات.

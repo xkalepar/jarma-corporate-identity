@@ -44,13 +44,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg lg:text-xl">ج</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-lg lg:text-xl font-bold text-foreground">شركة جرمه</h1>
-              <p className="text-xs text-muted-foreground">لاستيراد اللحوم والمواشي</p>
-            </div>
+            <button
+              onClick={() => scrollToSection("#hero")}
+              className="flex items-center gap-3 focus:outline-none"
+              aria-label="Home"
+            >
+              <img src="/logo.png" alt="Jarma Logo" className="h-20 w-auto" />
+            </button>
           </div>
 
           {/* Desktop Navigation */}
